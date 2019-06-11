@@ -441,9 +441,9 @@ def Simulation(name, opt_type, learning_rate, batch_size, minibatch_size, test_s
     
     # The first value of angle_log is not printed
     # because an angle cannot be measured in the first epoch.
-    print("angle between two consecutive parameter vectors:\n", angle_log[1:test_size])
+    print("angle between two consecutive gradients:\n", angle_log[1:test_size])
     plt.plot(range(1, ntests), angle_log[1:test_size], linestyle="", marker="o", markersize=3)
-    plt.ylabel("Angles Between Two Consecutive Parameter Vectors")
+    plt.ylabel("Angles Between Two Consecutive Gradients")
     plt.xlabel("Measurement Nr.")
     plt.title(name)
     plt.grid(True)
